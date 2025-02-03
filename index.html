@@ -20,7 +20,23 @@
     
     <section id="projetos">
         <h2>Meus Projetos</h2>
-        <div id="project-list">Carregando projetos...</div>
+        <div id="projetos-container">
+            <div class="project">
+                <h3>Snake Game</h3>
+                <p>É um jogo de cobrinha desenvolvido em Python utilizando a biblioteca Pygame. O objetivo do jogo é controlar a cobrinha para pegar as maçãs e crescer.</p>
+                <button onclick="window.location.href='https://github.com/Kaua-lop/Snake-Game'">Ver no GitHub</button>
+            </div>
+            <div class="project">
+                <h3>App de Catálogo de Gatos</h3>
+                <p>Um aplicativo para registrar gatos encontrados na rua, com localização, fotos e interações com a comunidade para ajudar a encontrar donos.</p>
+                <button onclick="window.location.href='https://github.com/Kaua-lop/Itacat'">Ver no GitHub</button>
+            </div>
+            <div class="project">
+                <h3>Portfolio Pessoal</h3>
+                <p>Este portfólio foi desenvolvido com HTML, CSS e JavaScript, apresentando meus projetos e informações profissionais.</p>
+                <button onclick="window.location.href='https://github.com/Kaua-lop/Portfolio'">Ver no GitHub</button>
+            </div>
+        </div>
     </section>
     
     <section id="contato">
@@ -29,6 +45,23 @@
         <p>GitHub: <a href="https://github.com/Kaua-lop" target="_blank">github.com/Kaua-lop</a></p>
     </section>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Kauã Robert Lopes | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Adicionando um efeito de destaque nos botões
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.backgroundColor = '#007bff';
+                button.style.color = 'white';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.backgroundColor = 'white';
+                button.style.color = '#007bff';
+            });
+        });
+    </script>
 </body>
 </html>

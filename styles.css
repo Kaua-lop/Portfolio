@@ -1,3 +1,10 @@
+/* Geral */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,47 +12,140 @@ body {
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
+    padding-bottom: 50px; /* Espaço para o rodapé */
 }
+
+/* Rodapé fixo */
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Cabeçalho */
 header {
     background-color: #007bff;
     color: white;
     padding: 20px;
 }
+
+header h1 {
+    margin: 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
 }
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-section {
-    padding: 20px;
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
+
+/* Seções */
+section {
+    padding: 40px 20px;
+}
+
+#projetos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .project {
     background-color: white;
-    padding: 15px;
-    margin: 10px auto;
+    padding: 20px;
+    margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 300px;
+    text-align: left;
 }
+
 .project h3 {
-    margin: 0;
+    margin-top: 0;
     color: #007bff;
 }
-.project a {
-    display: inline-block;
-    margin-top: 10px;
+
+.project p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.project button {
+    background-color: white;
     color: #007bff;
-    text-decoration: none;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
-.project a:hover {
-    text-decoration: underline;
+
+.project button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Contato */
+#contato p {
+    font-size: 14px;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box; /* Garante que o padding não cause overflow */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    footer {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+        padding: 8px; /* Ajusta o padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 10px; /* Ajusta o tamanho da fonte para celulares */
+        padding: 6px; /* Ajusta o padding para telas ainda menores */
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project {
+        max-width: 90%;
+    }
 }
